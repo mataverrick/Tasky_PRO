@@ -10,19 +10,21 @@
 <body class="font-sans antialiased bg-blue-50 text-gray-800">
     <header class="bg-white shadow-md">
         <div class="container mx-auto flex items-center justify-between py-2 px-6">
-            <a href="#" class="text-xl font-bold text-blue-500">Tasky</a>
+            <a href="#" class="text-xl font-bold text-blue-500">
+                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            </a>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#features" class="hover:text-blue-500">Características</a></li>
-                    <li><a href="#about" class="hover:text-blue-500">Acerca de</a></li>
-                    <li><a href="#contact" class="hover:text-blue-500">Contacto</a></li>
+                    <li><a href="#features" class="hover:text-blue-500 hover:border-b-2 hover:border-blue-600 transition">Características</a></li>
+                    <li><a href="#about" class="hover:text-blue-500 hover:border-b-2 hover:border-blue-600 transition">Acerca de</a></li>
+                    <li><a href="#contact" class="hover:text-blue-500 hover:border-b-2 hover:border-blue-600 transition">Contacto</a></li>
                 </ul>
             </nav>
             <div class="flex space-x-4">
                 @if (Route::has('login'))
                     @auth
                         <a href="{{ url('/dashboard') }}" 
-                           class="rounded-md px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 transition">
+                           class="px-4 py-2 text-blue-600 hover:border-b-2 hover:border-blue-500 transition">
                             Dashboard
                         </a>
                     @else
@@ -56,7 +58,7 @@
                 </a>
             </div>
             <div class="lg:w-1/2">
-            <img src="{{ Vite::asset('resources/images/image.png') }}" alt="Tasky Image" class="rounded-lg shadow-lg">
+            <img src="{{asset('/images/organizeimagen.png') }}" alt="Organize Image" class="rounded-lg shadow-lg">
 
             </div>
         </div>
@@ -86,7 +88,7 @@
     <section id="about" class="py-16 bg-gradient-to-b from-white to-blue-50">
         <div class="container mx-auto flex flex-col lg:flex-row items-center">
             <div class="lg:w-1/2">
-                <img src="{{ asset('images/tasky_about.png') }}" alt="About Tasky" class="rounded-lg shadow-md">
+            <img src="{{asset('/images/workspaceimage.png') }}" alt="workspace Image" class="rounded-lg shadow-lg">
             </div>
             <div class="lg:w-1/2 lg:pl-16 mt-8 lg:mt-0">
                 <h2 class="text-4xl font-semibold text-gray-800">Acerca de Tasky</h2>
